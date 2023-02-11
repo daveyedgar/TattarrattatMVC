@@ -29,6 +29,11 @@ namespace TattarrattatMVC.Controllers
             return View();
         }
 
+        public IActionResult Code()
+        {
+            return View();
+        }
+
         [HttpGet]
         public IActionResult Reverse()
         {
@@ -56,13 +61,14 @@ namespace TattarrattatMVC.Controllers
             if(revWord == inputWord)
             {
                 palindrome.IsPalindrome = true;
-                palindrome.Message = $"{palindrome.InputWord} is a palidrome!";
+                palindrome.Message = $"<b>{palindrome.InputWord}</b> is a palidrome!";
+                palindrome.RevWord = $"Your string reversed is <b>{revWord}</b>";
             }
             else
             {
                 palindrome.IsPalindrome = false;
-                palindrome.Message = $"{palindrome.InputWord} is not a palidrome.";
-
+                palindrome.Message = $"<b>{palindrome.InputWord}</b> is not a palidrome.";
+                palindrome.RevWord = $"Your string reversed is <b>{revWord}</b>";
             }
 
             return View(palindrome);
