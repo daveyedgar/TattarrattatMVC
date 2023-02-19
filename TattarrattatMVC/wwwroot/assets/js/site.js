@@ -1,4 +1,32 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿
 
-// Write your JavaScript code.
+document.getElementById("btnSubmit").addEventListener("click", showLink);
+
+
+function showLink() {
+    let codeLink = document.getElementById("codeLink");
+    //alert("hello");
+    setTimeout(function () { codeLink.innerHTML = '<a href="code.html">See The Code</a>'; }, 3000);
+    
+}
+
+
+//function showLink() {
+//    setTimeout(() => {
+//        let codeLink = document.getElementById("codeLink");
+//        codeLink.innerHTML = '<a href="code.html">See The Code</a>';
+//        alert("hello");
+//    }, "3000")
+
+//}
+
+//const mybutton = document.getElementById("btnSubmit");
+//mybutton.onclick = function () {
+//    mybutton.disabled = true;
+//    setTimeout(function () {
+//        let codeLink = document.getElementById("codeLink");
+//        codeLink.innerHTML = '<a href="code.html">See The Code</a>';
+//        mybutton.disabled = false;
+//        alert("hello");
+//    }, 2000);
+//}
